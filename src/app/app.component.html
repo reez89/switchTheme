@@ -13,8 +13,10 @@
     <div class="fxFlex" fxLayoutAlign="flex-end center">
       <mat-icon class="mat-18">brightness_5</mat-icon>
       <mat-slide-toggle
+        [formControl]="toggleControl"
         style="margin: 0 10px;"
-        color="accent">
+        color="accent"
+      >
       </mat-slide-toggle>
       <mat-icon class="mat-18">bedtime</mat-icon>
     </div>
