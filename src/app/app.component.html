@@ -1,6 +1,7 @@
 <div
   fxFlex
   fxLayout="column"
+  class="content mat-app-background"
   style="width: 100vw; height: 100vh;">
 
   <mat-toolbar
@@ -14,6 +15,8 @@
       <mat-icon class="mat-18">brightness_5</mat-icon>
       <mat-slide-toggle
         [formControl]="toggleControl"
+        [(ngModel)]="isDark"
+        (change)="storeThemeSelection()"
         style="margin: 0 10px;"
         color="accent"
       >
@@ -25,8 +28,9 @@
 
 
   <div
-  class="content mat-app-background"
-  style="width: 100%; height: 100%;"
+    style="width: 100%; height: 100%;"
+
   >
-</div>
+  {{isDark}}
+  </div>
 </div>
