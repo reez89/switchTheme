@@ -35,5 +35,18 @@ $switchThemeApp-theme: mat.define-light-theme((
 
 /* You can add global styles to this file, and also import other style files */
 
+
+// Dark theme styles
+$switchThemeApp-dark-theme: mat.define-dark-theme((
+  color: (
+    primary: $switchThemeApp-primary,
+    accent: $switchThemeApp-accent,
+    warn: $switchThemeApp-warn,
+  )
+));
+
+.dark-mode{
+  @include mat.all-component-themes($switchThemeApp-dark-theme);
+}
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
