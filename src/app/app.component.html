@@ -1,18 +1,18 @@
-<div
-  fxFlex
-  fxLayout="column"
-  class="content mat-app-background"
-  style="width: 100vw; height: 100vh;">
+<div class="container">
+
 
   <mat-toolbar
     color="primary"
-    fxFlex
+    fxFlex= "0 0 0"
     fxLayoutAlign="space-between center"
-    style="height: 100px">
+    style="height: 100px !important">
     <span>Angular Switch Theme</span>
 
     <div class="fxFlex" fxLayoutAlign="flex-end center">
-      <mat-icon class="mat-18">brightness_5</mat-icon>
+      <mat-icon
+        class="mat-18"
+        *ngIf="!isDark"
+      >brightness_5</mat-icon>
       <mat-slide-toggle
         [formControl]="toggleControl"
         [(ngModel)]="isDark"
@@ -21,16 +21,42 @@
         color="accent"
       >
       </mat-slide-toggle>
-      <mat-icon class="mat-18">bedtime</mat-icon>
+      <mat-icon
+        class="mat-18"
+        *ngIf="isDark"
+      >bedtime
+      </mat-icon>
     </div>
 
   </mat-toolbar>
 
-
   <div
-    style="width: 100%; height: 100%;"
-
+    fxFlex
+    fxLayout="column"
+    fxLayoutAlign="center center"
+    class="content mat-app-background"
+    style="height: 100%; width: 100%;"
   >
-  {{isDark}}
+    <div
+      class="card-container"
+      fxFlex
+      fxLayout="row"
+      fxLayoutAlign ="center center"
+      style="width: 50%"
+    >
+      <div class="info" style="width: 50%">
+        <p>Dark theme has been selected: {{switchedCounter}}</p>
+        <p *ngIf="isDark">The current mode is: Dark</p>
+        <p *ngIf="!isDark">The current mode is: Light</p>
+        <p>Last selected theme is : {{ lastTheme }}</p>
+      </div>
+
+      <div class="image" style="width:50%">
+          <img *ngIf="isDark" style="height: 150px" src="../assets/darth.png" alt="">
+
+          <img *ngIf="!isDark" style="height: 15s0px" src="../assets/storm.png" alt="">
+      </div>
+    </div>
   </div>
+
 </div>
