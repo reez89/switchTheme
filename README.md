@@ -1,27 +1,29 @@
-# SwitchThemeApp
+# Install 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.5.
+If you don't have Angular on your pc, install it by using this command from your terminal :
+- npm install -g @angular/cli
 
-## Development server
+# Clone the repository
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+If you want to youse this repo, got to your workspace folder via terminal, and paste this command line :
 
-## Code scaffolding
+- git clone https://github.com/reez89/switchTheme.git
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Pk
 
-## Build
+Go to your prefer IDE, access to your workspace folder, then to the switchTheme folder, run a terminal and paste the following script to download all the node_modules you need :
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- npm install
 
-## Running unit tests
+# Run
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Now that everything has been installe correctly, you can use START from the npm scripts on your left, or the following command in your terminal, to lunch the application :
 
-## Running end-to-end tests
+- ng server
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+# Usage
 
-## Further help
+If no error accured u should be able to acces to http://localhost:4200, that is the default route to access angular apps.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Enjoy, and feel free to share it.
+Reez
