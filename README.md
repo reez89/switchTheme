@@ -23,7 +23,9 @@ Now that everything has been installed correctly, you can use START from the npm
 
 # Usage
 
-If no error accured u should be able to acces to http://localhost:4200, that is the default route to access angular apps.
+If no error accured you should be able to acces to http://localhost:4200, that is the default route to access angular apps.
+
+The application will store your theme changes into the localStorage, so on the refresh of the page, you will find out the last theme selected.
 
 Enjoy, and feel free to share it.
 Reez
