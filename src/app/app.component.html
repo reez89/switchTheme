@@ -1,13 +1,11 @@
 <div class="container">
-
-
+<!-- TOLLBAR  -->
   <mat-toolbar
     color="primary"
     fxFlex= "0 0 0"
     fxLayoutAlign="space-between center"
     style="height: 100px !important">
     <span>Angular Switch Theme</span>
-
     <div class="fxFlex" fxLayoutAlign="flex-end center">
       <mat-icon
         class="mat-18"
@@ -27,9 +25,9 @@
       >bedtime
       </mat-icon>
     </div>
-
   </mat-toolbar>
-
+  <!--XXX TOLLBAR  -->
+  <!-- MAIN CONTAINER -->
   <div
     fxFlex
     fxLayout="column"
@@ -37,6 +35,7 @@
     class="content mat-app-background"
     style="height: 100%; width: 100%;"
   >
+  <!-- CARD WRAPPER -->
     <div
       class="card-container"
       fxFlex
@@ -44,19 +43,22 @@
       fxLayoutAlign ="center center"
       style="width: 50%"
     >
+    <!-- CARD INFO -->
       <div class="info" style="width: 50%">
+        <h2 *ngIf="isDark">“Anakin Skywalker was weak. I destroyed him.”</h2>
+        <h2 *ngIf="!isDark">“Rebels! Blast ’em.”</h2>
         <p>Dark theme has been selected: {{switchedCounter}}</p>
         <p *ngIf="isDark">The current mode is: Dark</p>
         <p *ngIf="!isDark">The current mode is: Light</p>
         <p>Last selected theme is : {{ lastTheme }}</p>
       </div>
-
+    <!-- CARD IMAGE -->
       <div class="image" style="width:50%">
-          <img *ngIf="isDark" style="height: 150px" src="../assets/darth.png" alt="">
-
-          <img *ngIf="!isDark" style="height: 15s0px" src="../assets/storm.png" alt="">
+        <img *ngIf="isDark" style="height: 150px" src="../assets/darth.png" alt="darthvader">
+        <img *ngIf="!isDark" style="height: 15s0px" src="../assets/storm.png" alt="stormtrooper">
       </div>
     </div>
+  <!-- CARD WRAPPER -->
   </div>
-
+<!--XXX MAIN CONTAINER -->
 </div>
