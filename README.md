@@ -17,7 +17,7 @@ Go to your prefer IDE, access to your workspace folder, then to the switchTheme 
 
 # Run
 
-Now that everything has been installe correctly, you can use START from the npm scripts on your left, or the following command in your terminal, to lunch the application :
+Now that everything has been installed correctly, you can use START from the npm scripts on your left, or the following command in your terminal, to lunch the application :
 
 - ng server
 
