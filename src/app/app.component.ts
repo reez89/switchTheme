@@ -26,10 +26,6 @@ export class AppComponent implements OnInit {
     //set the toggle to dark or light
     this.toggleControl.valueChanges.subscribe(val=>{
       this.className = val ? 'dark-mode' : 'light';
-    //increase the counter each time we change value
-      if(this.className === 'dark-mode'){
-        this.switchedCounter++
-      }
     //store the previous value of the theme
       this.lastTheme = localStorage.getItem('lastTheme') === 'dark-mode' ? 'Dark' : 'Light';
     })
@@ -38,6 +34,9 @@ export class AppComponent implements OnInit {
   storeThemeSelection() {
     localStorage.setItem('theme', this.isDark ? 'dark-mode' : 'light')
     localStorage.setItem('lastTheme', this.isDark ? 'dark-mode' : 'light')
+
+    //increase the counter each time we change value
+    this.switchedCounter++
   }
 
 }
