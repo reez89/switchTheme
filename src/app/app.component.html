@@ -47,7 +47,10 @@
       <div class="info" style="width: 50%">
         <h2 *ngIf="isDark">“Anakin Skywalker was weak. I destroyed him.”</h2>
         <h2 *ngIf="!isDark">“Rebels! Blast ’em.”</h2>
-        <p>Dark theme has been selected: {{switchedCounter}}</p>
+        <p>Theme has been changed: {{switchedCounter}}
+          <span *ngIf="switchedCounter <= 1">time</span>
+          <span *ngIf="switchedCounter > 1">times</span>
+        </p>
         <p *ngIf="isDark">The current mode is: Dark</p>
         <p *ngIf="!isDark">The current mode is: Light</p>
         <p>Last selected theme is : {{ lastTheme }}</p>
